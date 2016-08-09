@@ -30,9 +30,9 @@ int init_data()
 {
 	int i, j;
 	int *data;
+	//初始化样本
 	mat_point = cvCreateMat(COUNT, 4, CV_32SC1);
 	cvSetZero(mat_point);
-
 	srand(time(NULL));  
 	for (i = 0; i< mat_point->height; i++)
 	{
@@ -45,7 +45,7 @@ int init_data()
 		else
 			data[3] = -1;
 	}
-
+	//初始化权值
 	mat_weight = cvCreateMat(1, 4, CV_64FC1);
 	cvSetZero(mat_weight);
 
@@ -68,8 +68,8 @@ int show_update(int delay)
 	double *weight;
 	IplImage *p_image = cvCreateImage(cvSize(WIDTH, HEIGHT), IPL_DEPTH_8U, 3);
 	cvZero(p_image);
+	//绘制样本点
 	CvScalar scalar = cvScalar(255, 255, 255, 0);
-
 	for (i = 0; i < COUNT; i++)
 	{
 		point = (int *)(mat_point->data.ptr + mat_point->step * i);
@@ -82,7 +82,7 @@ int show_update(int delay)
 		cvLine(p_image, cvPoint(point[0] - 2, point[1]),cvPoint(point[0] + 2, point[1]), scalar, 1);
 		cvLine(p_image, cvPoint(point[0], point[1] - 2),cvPoint(point[0], point[1] + 2), scalar, 1);
 	}
-
+	//绘制分界面
 	weight = mat_weight->data.db;
 	if (weight[0] < -0.0001 || weight[0] > 0.0001)
 	{
@@ -121,7 +121,7 @@ int show_update(int delay)
 
 	scalar = cvScalar(255, 0, 0, 0);
 	cvLine(p_image, cvPoint(x1, y1),cvPoint(x2, y2), scalar, 2);
-
+	//显示
 	cvNamedWindow("perceptron", 1);
 	cvShowImage("perceptron", p_image);
 	cvWaitKey(delay);
@@ -160,6 +160,7 @@ int perceptron()
 		{
 			point = (int *)(mat_point->data.ptr + mat_point->step * i);
 			weight = mat_weight->data.db;
+			//计算输出，比较后矫正权值
 			int output = compute(point,weight);
 			if(output!= point[3])
 			{
@@ -172,9 +173,15 @@ int perceptron()
 		}
 		count++;
 // 		cout<<count<<endl;
-//  		show_update(50);
+//  	show_update(50);
 	}
 	show_update(0);
 	release_data();
+	return 0;
+}
+
+int main()
+{
+	perceptron();
 	return 0;
 }

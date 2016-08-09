@@ -120,8 +120,10 @@ static void show_outcome()
 			int y = static_cast<int>(c[i].center.y);
 			cvCircle(p_image, cvPoint(x,y), 10, scalar,2);
 		}
+		cvNamedWindow("Kmeans");
 		cvShowImage("Kmeans", p_image);
 		cvWaitKey(1000);//100毫秒是个差不多的数值，可以完整的看到聚类过程
+		cvDestroyWindow("Kmeans");
 }
 
 static void init()
@@ -163,9 +165,6 @@ int kmeans_test()
 	cvSetZero(p_image);
 	while(!good_result())//检查是否是需要的聚类中心
 	{
-// 		for(int j = 0; j < K; j++)
-// 			c[j].count = 0;
-
 		for(int i = 0; i < SAMPLE_NUM; i++)
 		{
 			double min_dist = 10000;
