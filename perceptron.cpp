@@ -1,16 +1,4 @@
-#include <time.h>
-#include <stdlib.h>
-#include <math.h>
-#include <string.h>
-#include <stdio.h>
-#include <iostream>
-using namespace std;
-#include <cv.h>
-#include <cxcore.h>
-#include <cxerror.h>
-#include <highgui.h>
-#include <ml.h>
-#include <cxmisc.h>
+#include "comm_def_col.h"
 
 //PerceptronLearning Algorithm(PLA)
 
@@ -177,11 +165,5 @@ int perceptron()
 	}
 	show_update(0);
 	release_data();
-	return 0;
-}
-
-int main()
-{
-	perceptron();
 	return 0;
 }

@@ -1,4 +1,4 @@
-#include "comm.hpp"
+#include "comm_def_col.h"
 
 #define K 5
 #define TH 0.02			//ãÐÖµ

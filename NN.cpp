@@ -1,4 +1,4 @@
-#include "comm.hpp"
+#include "comm_def_col.h"
 #include "SampleNN.h"
 
 int NN()
@@ -22,11 +22,5 @@ int NN()
 				<<nn.actual_output<<endl;
 		}
 	}
-	return 0;
-}
-
-int main()
-{
-	NN();
 	return 0;
 }
