@@ -78,6 +78,7 @@
   <ItemGroup>
     <ClCompile Include="cv_ann.cpp" />
     <ClCompile Include="kmeans_test.cpp" />
+    <ClCompile Include="cv_lda.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="NN.cpp" />
     <ClCompile Include="perceptron.cpp" />

@@ -33,6 +33,9 @@
     <ClCompile Include="perceptron.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="cv_lda.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SampleNN.h">
