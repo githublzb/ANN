@@ -4,3 +4,6 @@
 SampleNN.cpp
 SampleNN.cpp
 NN.cpp
+
+opencv2.4.9Éñ¾­ÍøÂçÑµÁ·Ó¡Ë¢×ÖÌå:
+char_ann.cpp

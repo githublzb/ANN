@@ -36,6 +36,9 @@
     <ClCompile Include="cv_lda.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="char_ann.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SampleNN.h">
