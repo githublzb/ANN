@@ -1,9 +1,18 @@
 # pattern-recognition
 
-Éñ¾­ÍøÂçµ¥²ã¸ĞÖªÆ÷£º
+ç¥ç»ç½‘ç»œå•å±‚æ„ŸçŸ¥å™¨ï¼š
 SampleNN.cpp
 SampleNN.cpp
 NN.cpp
 
-opencv2.4.9Éñ¾­ÍøÂçÑµÁ·Ó¡Ë¢×ÖÌå:
-char_ann.cpp
+ç¥ç»ç½‘ç»œä»£ç æµ‹è¯•ï¼ˆcv_ann.cppï¼‰
+![reuslt](https://raw.githubusercontent.com/viccwq/ANN/master/screenshot/cv_ann.png)
+
+opencv2.4.9ç¥ç»ç½‘ç»œè®­ç»ƒå°åˆ·å­—ä½“ï¼ˆchar_ann.cppï¼‰
+samplesï¼š
+![reuslt](https://raw.githubusercontent.com/viccwq/ANN/master/screenshot/char_ann_3.jpg)
+resultsï¼š
+![reuslt](https://raw.githubusercontent.com/viccwq/ANN/master/screenshot/char_ann_1.jpg)
+![reuslt](https://raw.githubusercontent.com/viccwq/ANN/master/screenshot/char_ann_2.jpg)
+
+
