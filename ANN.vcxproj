@@ -76,6 +76,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="adaptive_thresh.cpp" />
     <ClCompile Include="char_ann.cpp" />
     <ClCompile Include="cv_ann.cpp" />
     <ClCompile Include="kmeans_test.cpp" />

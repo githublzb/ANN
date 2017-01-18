@@ -8,6 +8,8 @@ extern int cv_lda();
 
 extern int char_ann();
 
+extern int adaptive_thresh( int, string file_name);
+
 int main()
 {
 //	NN();
@@ -15,7 +17,8 @@ int main()
 //	cv_lda();
 //	perceptron();
 //	kmeans_test();
-	char_ann();
+//	char_ann();
+	adaptive_thresh(1, "fingerprint.png");
 	system("pause");
 	return 0;
 }

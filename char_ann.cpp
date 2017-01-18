@@ -208,9 +208,17 @@ void OCR::test()
 
 int char_ann()
 {
-
-	save_xml();
-	OCR ocr("aaa");
-	ocr.test();
+	char input[32];
+	cout<<"input the command[g|r]:";
+	cin>>input;
+	if ('g' == input[0])
+		save_xml();
+	else if ('r' == input[0])
+	{
+		OCR ocr("aaa");
+		ocr.test();
+	}
+	else
+		;
 	return 0;
 }

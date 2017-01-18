@@ -39,6 +39,9 @@
     <ClCompile Include="char_ann.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="adaptive_thresh.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SampleNN.h">
